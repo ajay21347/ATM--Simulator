@@ -43,7 +43,7 @@ class Login extends JFrame implements ActionListener {
 
         //Card No
         label2 = new JLabel("Card No:");
-        label2.setFont(new Font("Ralway", Font.BOLD, 28));
+        label2.setFont(new Font("Raleway", Font.BOLD, 28));
         label2.setForeground(Color.WHITE);
         label2.setBounds(150, 90, 375, 30);
         add(label2);
@@ -56,7 +56,7 @@ class Login extends JFrame implements ActionListener {
 
         //Pin No
         label3 = new JLabel("PIN: ");
-        label3.setFont(new Font("Ralway", Font.BOLD, 28));
+        label3.setFont(new Font("Raleway", Font.BOLD, 28));
         label3.setForeground(Color.WHITE);
         label3.setBounds(150, 250, 375, 30);
         add(label3);
@@ -85,7 +85,7 @@ class Login extends JFrame implements ActionListener {
         add(button2);
 
         //CLear Button
-        button3 = new JButton("CLear");
+        button3 = new JButton("Clear");
         button3.setFont(new Font("Arial", Font.BOLD, 14));
         button3.setForeground(Color.BLACK);
         button3.setBounds(300, 350, 230, 30);
@@ -109,8 +109,8 @@ class Login extends JFrame implements ActionListener {
         @Override
         public void actionPerformed
         (ActionEvent e
-            
-        ){
+        
+            ){
         try {
                 if (e.getSource() == button1) {
 
