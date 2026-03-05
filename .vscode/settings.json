@@ -1,7 +1,0 @@
-{
-  "java.project.referencedLibraries": [
-    "lib/**/*.jar",
-    "src/lib/jcalendar-1.4.jar"
-  ],
-  "java.debug.settings.onBuildFailureProceed": true
-}
