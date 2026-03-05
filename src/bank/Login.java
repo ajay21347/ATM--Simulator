@@ -19,7 +19,7 @@ class Login extends JFrame implements ActionListener {
         super("Bank Management System");
 
         //Bank Logo
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("bank/icon/bank.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
@@ -27,7 +27,7 @@ class Login extends JFrame implements ActionListener {
         add(image);
 
         //Card Logo
-        ImageIcon ii1 = new ImageIcon(ClassLoader.getSystemResource("bank/icon/card.png"));
+        ImageIcon ii1 = new ImageIcon(ClassLoader.getSystemResource("icon/card.png"));
         Image ii2 = ii1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon ii3 = new ImageIcon(ii2);
         JLabel iimage = new JLabel(ii3);
@@ -45,7 +45,7 @@ class Login extends JFrame implements ActionListener {
         label2 = new JLabel("Card No:");
         label2.setFont(new Font("Raleway", Font.BOLD, 28));
         label2.setForeground(Color.WHITE);
-        label2.setBounds(150, 90, 375, 30);
+        label2.setBounds(150, 190, 375, 30);
         add(label2);
 
         //Card No field
@@ -81,7 +81,7 @@ class Login extends JFrame implements ActionListener {
         button2.setFont(new Font("Arial", Font.BOLD, 14));
         button2.setForeground(Color.BLACK);
         button2.setBounds(430, 300, 100, 30);
-        button1.addActionListener(this);
+        button2.addActionListener(this);
         add(button2);
 
         //CLear Button
@@ -93,7 +93,7 @@ class Login extends JFrame implements ActionListener {
         add(button3);
 
         //Background Image
-        ImageIcon iii1 = new ImageIcon(ClassLoader.getSystemResource("bank/icon/backbg.png"));
+        ImageIcon iii1 = new ImageIcon(ClassLoader.getSystemResource("icon/backbg.png"));
         Image iii2 = iii1.getImage().getScaledInstance(850, 480, Image.SCALE_DEFAULT);
         ImageIcon iii3 = new ImageIcon(iii2);
         JLabel iiimage = new JLabel(iii3);
@@ -105,12 +105,9 @@ class Login extends JFrame implements ActionListener {
         setLocation(450, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-
+    }
         @Override
-        public void actionPerformed
-        (ActionEvent e
-        
-            ){
+        public void actionPerformed(ActionEvent e){
         try {
                 if (e.getSource() == button1) {
 
@@ -124,9 +121,10 @@ class Login extends JFrame implements ActionListener {
                 E.printStackTrace();
             }
         }
-    }
+
 
     public static void main(String[] args) {
         new Login();
     }
+
 }

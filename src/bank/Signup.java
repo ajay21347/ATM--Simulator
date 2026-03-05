@@ -36,29 +36,29 @@ public class Signup extends JFrame implements ActionListener {
         super("APPLICATION FORM");
 
         //Bank Logo
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("bank/icon/bank.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon//bank.png"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
         image.setBounds(25, 10, 100, 100);
         add(image);
 
-        //Aplication No
+        //Apllication No
         JLabel label1 = new JLabel("APPLICATION FORM NO: ");
-        label1.setBounds(130, 20, 600, 40);
+        label1.setBounds(200, 20, 600, 40);
         label1.setFont(new Font("Raleway", Font.BOLD, 38));
         add(label1);
 
         //Page 1
         JLabel label2 = new JLabel("Page 1");
         label2.setFont(new Font("Raleway", Font.BOLD, 22));
-        label2.setBounds(330, 70, 600, 30);
+        label2.setBounds(360, 70, 600, 30);
         add(label2);
 
         //Personal Details
         JLabel label3 = new JLabel("Personal Details");
         label3.setFont(new Font("Raleway", Font.BOLD, 22));
-        label3.setBounds(290, 90, 600, 30);
+        label3.setBounds(310, 100, 600, 30);
         add(label3);
 
         //Name
@@ -75,7 +75,7 @@ public class Signup extends JFrame implements ActionListener {
         //Father's Name
         JLabel labelfName = new JLabel("Father's Name :");
         labelfName.setFont(new Font("Raleway", Font.BOLD, 20));
-        labelfName.setBounds(100, 190, 100, 30);
+        labelfName.setBounds(100, 240, 200, 30);
         add(labelfName);
 
         textfName = new JTextField();
@@ -91,25 +91,25 @@ public class Signup extends JFrame implements ActionListener {
 
         dateChooser = new JDateChooser();
         dateChooser.setForeground(new Color(105, 105, 105));
-        dateChooser.setBounds(300, 340, 400, 30);
+        dateChooser.setBounds(300, 300, 400, 30);
         add(dateChooser);
 
         //Gender
         JLabel labelG = new JLabel("Gender: ");
         labelG.setFont(new Font("Raleway", Font.BOLD, 20));
-        DOB.setBounds(100, 290, 200, 30);
+        labelG.setBounds(100, 350, 200, 30);
         add(labelG);
 
         r1 = new JRadioButton("Male");
-        r1.setFont(new Font("Raleway", Font.BOLD, 14));
+        r1.setFont(new Font("Raleway", Font.BOLD, 16));
         r1.setBackground(new Color(222, 255, 228));
-        r1.setBounds(300, 290, 60, 30);
+        r1.setBounds(300, 350, 80, 30);
         add(r1);
 
         r2 = new JRadioButton("Female");
-        r2.setFont(new Font("Raleway", Font.BOLD, 14));
+        r2.setFont(new Font("Raleway", Font.BOLD, 16));
         r2.setBackground(new Color(222, 255, 228));
-        r2.setBounds(450, 290, 90, 30);
+        r2.setBounds(450, 350, 100, 30);
         add(r2);
 
         ButtonGroup buttonGroup = new ButtonGroup();
@@ -120,36 +120,36 @@ public class Signup extends JFrame implements ActionListener {
         JLabel labelEmail = new JLabel("Email Address :");
         labelEmail.setFont(new Font("Raleway", Font.BOLD, 20));
         labelEmail.setBackground(new Color(222, 255, 228));
-        labelEmail.setBounds(100, 390, 200, 30);
+        labelEmail.setBounds(100, 400, 200, 30);
         add(labelEmail);
 
         textEmail = new JTextField();
         textEmail.setFont(new Font("Raleway", Font.BOLD, 14));
-        textEmail.setBounds(300, 390, 400, 30);
+        textEmail.setBounds(300, 400, 400, 30);
         add(textEmail);
 
         //Marital Status
         JLabel labelMs = new JLabel("Marital Status :");
         labelMs.setFont(new Font("Raleway", Font.BOLD, 20));
-        labelMs.setBounds(100, 440, 200, 30);
+        labelMs.setBounds(100, 450, 200, 30);
         add(labelMs);
 
         m1 = new JRadioButton("Married");
-        m1.setBounds(300, 440, 100, 30);
+        m1.setBounds(300, 450, 100, 30);
         m1.setBackground(new Color(222, 255, 228));
-        m1.setFont(new Font("Raleway", Font.BOLD, 14));
+        m1.setFont(new Font("Raleway", Font.BOLD, 16));
         add(m1);
 
         m2 = new JRadioButton("Unmarried");
-        m2.setBounds(450, 440, 100, 30);
+        m2.setBounds(450, 450, 150, 30);
         m2.setBackground(new Color(222, 255, 228));
-        m2.setFont(new Font("Raleway", Font.BOLD, 14));
+        m2.setFont(new Font("Raleway", Font.BOLD, 16));
         add(m2);
 
         m3 = new JRadioButton("Other");
-        m3.setBounds(635, 440, 100, 30);
+        m3.setBounds(635, 450, 100, 30);
         m3.setBackground(new Color(222, 255, 228));
-        m3.setFont(new Font("Raleway", Font.BOLD, 14));
+        m3.setFont(new Font("Raleway", Font.BOLD, 16));
         add(m3);
 
         ButtonGroup buttonGroup1 = new ButtonGroup();
@@ -160,52 +160,52 @@ public class Signup extends JFrame implements ActionListener {
         //Address
         JLabel labelAdd = new JLabel("Address :");
         labelAdd.setFont(new Font("Raleway", Font.BOLD, 20));
-        labelAdd.setBounds(100, 490, 200, 30);
+        labelAdd.setBounds(100, 500, 200, 30);
         add(labelAdd);
 
         textAdd = new JTextField();
         textAdd.setFont(new Font("Raleway", Font.BOLD, 14));
-        textAdd.setBounds(300, 490, 400, 30);
+        textAdd.setBounds(300, 500, 400, 30);
         add(textAdd);
 
         //City
         JLabel labelCity = new JLabel("City :");
         labelCity.setFont(new Font("Raleway", Font.BOLD, 20));
-        labelCity.setBounds(100, 540, 200, 30);
+        labelCity.setBounds(100, 550, 200, 30);
         add(labelCity);
 
         textCity = new JTextField();
         textCity.setFont(new Font("Raleway", Font.BOLD, 14));
-        textCity.setBounds(300, 540, 400, 30);
+        textCity.setBounds(300, 550, 400, 30);
         add(textCity);
 
         //Pin Code
         JLabel labelPin = new JLabel("Pin Code :");
         labelPin.setFont(new Font("Raleway", Font.BOLD, 20));
-        labelPin.setBounds(100, 590, 200, 30);
+        labelPin.setBounds(100, 600, 200, 30);
         add(labelPin);
 
         textPin = new JTextField();
         textPin.setFont(new Font("Raleway", Font.BOLD, 14));
-        textPin.setBounds(300, 590, 400, 30);
+        textPin.setBounds(300, 600, 400, 30);
         add(textPin);
 
         //State
         JLabel labelState = new JLabel("State :");
         labelState.setFont(new Font("Raleway", Font.BOLD, 20));
-        labelState.setBounds(100, 640, 200, 30);
+        labelState.setBounds(100, 650, 200, 30);
         add(labelState);
 
         textState = new JTextField();
         textState.setFont(new Font("Raleway", Font.BOLD, 14));
-        textState.setBounds(300, 640, 400, 30);
+        textState.setBounds(300, 650, 400, 30);
         add(textState);
 
         next = new JButton("Next");
         next.setFont(new Font("Raleway", Font.BOLD, 20));
         next.setBackground(Color.BLACK);
         next.setForeground(Color.WHITE);
-        next.setBounds(620, 710, 80, 30);
+        next.setBounds(620, 700, 80, 30);
         next.addActionListener(this);
         add(next);
 
@@ -215,19 +215,8 @@ public class Signup extends JFrame implements ActionListener {
         setLocation(360, 40);
         setVisible(true);
 
-       
-        
 
-    
-
-    
-
-    
-
-    
-
-    
-
+    }
     
 
     public void actionPerformed(ActionEvent e
@@ -264,7 +253,7 @@ public class Signup extends JFrame implements ActionListener {
                 Conn con1 = new Conn();
                 String q = "insert into signup values('" + formno + "','" + name + "','" + fname + "','" + dob + "','" + gender + "','" + email + "','" + marital + "','" + city + "','" + pincode + "','" + state + "') ";
                 con1.statement.executeUpdate(q);
-                new Signup2();
+                new Signup2(first);
                 setVisible(false);
 
             }
@@ -272,11 +261,9 @@ public class Signup extends JFrame implements ActionListener {
         } catch (Exception E) {
             E.printStackTrace();
         }
+
     }
-
+ public static void main(String[] args){
+ new Signup();
 }
-
-// public static void main(String[] args){
-// new Signup();
-// }
 }
