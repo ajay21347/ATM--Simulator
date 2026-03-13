@@ -24,7 +24,7 @@ public class Signup extends JFrame implements ActionListener {
 
     long first4 = (ran.nextLong() % 9000L) + 1000L;
 
-    String first = " " + Math.abs(first4);
+    String first = "" + Math.abs(first4);
 
     JTextField textName, textfName, textEmail, textAdd, textPin, textState, textCity;
     JDateChooser dateChooser;
@@ -44,7 +44,7 @@ public class Signup extends JFrame implements ActionListener {
         add(image);
 
         //Apllication No
-        JLabel label1 = new JLabel("APPLICATION FORM NO: ");
+        JLabel label1 = new JLabel("APPLICATION FORM NO: "+first);
         label1.setBounds(200, 20, 600, 40);
         label1.setFont(new Font("Raleway", Font.BOLD, 38));
         add(label1);
@@ -251,9 +251,9 @@ public class Signup extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Fill all the fields.");
             } else {
                 Conn con1 = new Conn();
-                String q = "insert into signup values('" + formno + "','" + name + "','" + fname + "','" + dob + "','" + gender + "','" + email + "','" + marital + "','" + city + "','" + pincode + "','" + state + "') ";
+                String q = "insert into signup values('" + formno + "','" + name + "','" + fname + "','" + dob + "','" + gender + "','" + email + "','" + marital + "','" + address + "','" + city + "','" + pincode + "','" + state + "') ";
                 con1.statement.executeUpdate(q);
-                new Signup2(first);
+                new Signup2(formno);
                 setVisible(false);
 
             }

@@ -18,7 +18,7 @@ public class Signup2 extends JFrame implements ActionListener {
         super("APPLICATION FORM");
 
         //Bank Logo
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon//bank.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
@@ -144,6 +144,10 @@ public class Signup2 extends JFrame implements ActionListener {
         r2.setBounds(450, 490, 100, 30);
         add(r2);
 
+        ButtonGroup bg1 = new ButtonGroup();
+        bg1.add(r1);
+        bg1.add(r2);
+
         //Existing Account
         JLabel l11 = new JLabel("Existing Account :");
         l11.setFont(new Font("Raleway", Font.BOLD, 18));
@@ -162,15 +166,19 @@ public class Signup2 extends JFrame implements ActionListener {
         e2.setBounds(450, 540, 100, 30);
         add(e2);
 
+        ButtonGroup bg2 = new ButtonGroup();
+        bg2.add(e1);
+        bg2.add(e2);
+
         //Form No
         JLabel l12 = new JLabel("Form No :");
         l12.setFont(new Font("Raleway", Font.BOLD, 18));
-        l12.setBounds(700, 10, 100, 30);
+        l12.setBounds(600, 10, 120, 30);
         add(l12);
 
         JLabel l13 = new JLabel(formno);
         l13.setFont(new Font("Raleway", Font.BOLD, 18));
-        l13.setBounds(760, 10, 60, 30);
+        l13.setBounds(720, 10, 100, 30);
         add(l13);
 
 
@@ -212,9 +220,9 @@ public class Signup2 extends JFrame implements ActionListener {
         }
 
         String eAccount = "";
-        if (r1.isSelected()) {
+        if (e1.isSelected()) {
             eAccount = "Yes";
-        } else if (r2.isSelected()) {
+        } else if (e2.isSelected()) {
             eAccount = "No";
         }
 

@@ -156,8 +156,6 @@ public class Signup3 extends JFrame implements ActionListener {
         add(c6);
 
 
-
-
         JCheckBox c7 = new JCheckBox("I hear by declare that the above entered correct to the best of my knowledge.", true);
         c7.setBackground(new Color(215, 252, 252));
         c7.setFont(new Font("Raleway", Font.BOLD, 12));
@@ -170,8 +168,8 @@ public class Signup3 extends JFrame implements ActionListener {
         l12.setBounds(700, 10, 70, 30);
         add(l12);
 
-        JLabel l13 = new JLabel();
-        l13.setFont(new Font("Raleway", Font.BOLD, 18));
+        JLabel l13 = new JLabel(formno);
+        l13.setFont(new Font("Raleway", Font.BOLD, 14));
         l13.setBounds(760, 10, 60, 30);
         add(l13);
 
@@ -250,6 +248,7 @@ public class Signup3 extends JFrame implements ActionListener {
                     c1.statement.executeUpdate(q1);
                     c1.statement.executeUpdate(q2);
                     JOptionPane.showMessageDialog(null, "Card Number :" + cardno + "\n Pin :" + pin);
+                    new Deposit(pin);
                     setVisible(false);
                 }
             } else if (e.getSource() == c) {

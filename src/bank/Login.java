@@ -1,11 +1,10 @@
 package bank;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Image;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
+import java.sql.ResultSet;
 
 class Login extends JFrame implements ActionListener {
 
@@ -50,7 +49,7 @@ class Login extends JFrame implements ActionListener {
 
         //Card No field
         textField = new JTextField(15);
-        textField.setBounds(325, 190, 123, 30);
+        textField.setBounds(325, 190, 230, 30);
         textField.setFont(new Font("Arial", Font.BOLD, 14));
         add(textField);
 
@@ -68,7 +67,7 @@ class Login extends JFrame implements ActionListener {
         add(passwordField);
 
         //Sign In Button
-        button1 = new JButton("Sign In");
+        button1 = new JButton("SIGN UP");
         button1.setFont(new Font("Arial", Font.BOLD, 14));
         button1.setForeground(Color.WHITE);
         button1.setBackground(Color.BLACK);
@@ -76,16 +75,16 @@ class Login extends JFrame implements ActionListener {
         button1.addActionListener(this);
         add(button1);
 
-        //Login Button
-        button2 = new JButton("Login");
+        //Clear Button
+        button2 = new JButton("CLEAR");
         button2.setFont(new Font("Arial", Font.BOLD, 14));
         button2.setForeground(Color.BLACK);
         button2.setBounds(430, 300, 100, 30);
         button2.addActionListener(this);
         add(button2);
 
-        //CLear Button
-        button3 = new JButton("Clear");
+        //Sign Button
+        button3 = new JButton("SIGN UP");
         button3.setFont(new Font("Arial", Font.BOLD, 14));
         button3.setForeground(Color.BLACK);
         button3.setBounds(300, 350, 230, 30);
@@ -106,25 +105,38 @@ class Login extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-        @Override
-        public void actionPerformed(ActionEvent e){
-        try {
-                if (e.getSource() == button1) {
-
-                } else if (e.getSource() == button2) {
-                    textField.setText("");
-                    passwordField.setText("");
-                } else if (e.getSource() == button3) {
-
-                }
-            } catch (Exception E) {
-                E.printStackTrace();
-            }
-        }
-
 
     public static void main(String[] args) {
         new Login();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        try {
+            if (e.getSource() == button1) {
+                Conn c = new Conn();
+                String cardno = textField.getText();
+                String pin = passwordField.getText();
+                String q = "select * from login where card_number='" + cardno + "' and pin='" + pin + "' ";
+                ResultSet resultSet = c.statement.executeQuery(q);
+                if (resultSet.next()) {
+                    setVisible(false);
+                    new main_Class(pin);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Incorrect Card Number or Pin");
+                }
+
+
+            } else if (e.getSource() == button2) {
+                textField.setText("");
+                passwordField.setText("");
+            } else if (e.getSource() == button3) {
+                new Signup();
+                setVisible(false);
+            }
+        } catch (Exception E) {
+            E.printStackTrace();
+        }
     }
 
 }
